@@ -74,6 +74,7 @@
     >
         {centText}
     </button>
+    <!-- svelte-ignore a11y-autofocus -->
     <input
         autofocus
         type="datetime-local"
