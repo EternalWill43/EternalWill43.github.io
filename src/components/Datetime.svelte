@@ -90,23 +90,51 @@
 </div>
 
 <style>
-    .btn {
-        background-color: #4caf50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 50%;
+    @media only screen and (max-width: 768px) {
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100vw;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            height: 2em;
+        }
     }
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    input {
-        width: 50%;
-        height: 2em;
+    @media (min-width: 767px) {
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+            height: 5em;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input {
+            width: 50%;
+            height: 5em;
+        }
+        * {
+            font-size: 1.5em;
+        }
     }
 </style>
