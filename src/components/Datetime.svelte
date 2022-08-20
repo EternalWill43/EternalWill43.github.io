@@ -1,7 +1,5 @@
 <script>
-    let val = new Date().toLocaleString("en-US", {
-        timeZone: "America/New_York",
-    });
+    let val;
     let price = 0;
     let days = 0;
     let hours = 0;
