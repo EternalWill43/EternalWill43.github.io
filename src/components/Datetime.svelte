@@ -1,5 +1,7 @@
 <script>
-    let val;
+    let val = new Date().toLocaleString("en-US", {
+        timeZone: "America/New_York",
+    });
     let price = 0;
     let days = 0;
     let hours = 0;
@@ -77,10 +79,8 @@
     <input
         autofocus
         type="datetime-local"
-        value={val}
         on:change={(e) => {
             val = e.target.value;
-            console.log(val);
         }}
     />
     <button class="btn" on:click={() => getPrice()}>CALCULATE</button>
