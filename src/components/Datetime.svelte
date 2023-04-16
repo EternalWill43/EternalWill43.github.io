@@ -5,7 +5,7 @@
     let hours = 0;
     let minutes = 0;
     let central = true;
-    let centText = "CENTRAL";
+    let centText = "CENTRAL (click to change)";
     function getPrice() {
         let miliseconds = new Date().getTime() - new Date(val).getTime();
         if (miliseconds < 0) return;
@@ -69,7 +69,9 @@
         class="btn"
         on:click={() => {
             central = !central;
-            centText = central ? "CENTRAL" : "ECONOMY";
+            centText = central
+                ? "CENTRAL (click to change)"
+                : "ECONOMY (click to change)";
         }}
     >
         {centText}
@@ -100,16 +102,21 @@
             cursor: pointer;
             width: 100vw;
         }
+        .btn:nth-of-type(2) {
+            height: 20%;
+        }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
+            height: 100vh;
+            font-size: 2em;
         }
         input {
             width: 100%;
-            height: 2em;
+            height: 4em;
         }
     }
     @media (min-width: 767px) {
