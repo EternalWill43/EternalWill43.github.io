@@ -16,48 +16,48 @@
         minutes %= 60;
         if (central) {
             if (days > 0) {
-                price = days * 38;
+                price = days * 41;
                 if (hours >= 6) {
-                    price += 38;
+                    price += 41;
                 } else {
-                    price += 19;
+                    price += 21;
                 }
             }
             if (days < 1) {
                 if (hours < 1) {
-                    price = 8;
+                    price = 9;
                 } else if (hours == 1) {
-                    price = 21;
+                    price = 23;
                 } else if (hours == 2) {
-                    price = 26;
+                    price = 28;
                 } else if (hours == 3) {
-                    price = 30;
+                    price = 32;
                 } else if (hours >= 4 && hours <= 7) {
-                    price = 34;
+                    price = 36;
                 } else {
-                    price = 38;
+                    price = 41;
                 }
             }
         } else {
             if (days > 0) {
-                price = days * 29;
+                price = days * 32;
                 if (hours >= 6) {
-                    price += 29;
+                    price += 32;
                 } else {
-                    price += 15;
+                    price += 16;
                 }
             }
             if (days < 1) {
                 if (hours < 1) {
-                    price = 8;
+                    price = 9;
                 } else if (hours == 1) {
-                    price = 20;
-                } else if (hours == 2) {
                     price = 22;
+                } else if (hours == 2) {
+                    price = 24;
                 } else if (hours == 3) {
-                    price = 25;
+                    price = 27;
                 } else {
-                    price = 29;
+                    price = 32;
                 }
             }
         }
